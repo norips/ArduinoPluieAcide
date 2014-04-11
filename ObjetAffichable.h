@@ -14,12 +14,12 @@ class ObjetAffichable {
     private:
       void setPosXPrecedente(int);
       void setPosYPrecedente(int);
-      void setTabPhysique(int*,int)//tab + tailleTab
+      void setTabPhysique(int*,int);//tab + tailleTab
       int posX;
       int posY;
       int posXPrecedente;
       int posYPrecedente;
-      int *tabPhysique
+      int *tabPhysique;
      
   
   
