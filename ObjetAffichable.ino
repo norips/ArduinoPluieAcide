@@ -7,6 +7,7 @@ void ObjetAffichable::setTabPhysique(int *tab,int tailleTab){
     tabPhysique=new int [tailleTab];
    for(int i=0;i<tab;i++)  
      tabPhysique[i]=tab;
+     
 }
 int ObjetAffichable::getPosX()
 {
