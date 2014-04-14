@@ -1,26 +1,36 @@
+#ifndef OBJETAFFICHABLE_H
+#define OBJETAFFICHABLE_H
+
 class ObjetAffichable {
- 
     public:
-      ObjetAffichable () ;
-      virtual ~ObjetAffichable()=0;
+      ObjetAffichable();
+      ~ObjetAffichable();
       int getPosX();
       int getPosY();
       int getPosXPrecedente();
-      
+      void Dessiner(char);
+      virtual void Effacer(char);
       int getPosYPrecedente();
       void setPosX(int);
       void setPosY(int);
+      void setTabPhysiqueX(char[],char);//tab + tailleTab
+      void setTabPhysiqueY(char[],char);//tab + tailleTab
+      virtual boolean Tomber(int);
+      virtual boolean IsFall();
+      virtual boolean Touche(int);
       
-    private:
+    protected:
       void setPosXPrecedente(int);
       void setPosYPrecedente(int);
-      void setTabPhysique(int*,int);//tab + tailleTab
       int posX;
       int posY;
       int posXPrecedente;
       int posYPrecedente;
-      int *tabPhysique;
-     
+      int *tabPhysiqueX;
+      int *tabPhysiqueY;
   
   
 };
+
+
+#endif

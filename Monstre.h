@@ -1,28 +1,22 @@
-/* Class Monstre
+/* Class Monstre 
 
-Personnage
+Monstre
 
 */
 #ifndef MONSTRE_H
 #define MONSTRE_H
+#include "ObjetAffichable.h"
 
-
-class Monstre {
+class Monstre : public ObjetAffichable{
  public:
    Monstre();
    ~Monstre();
-   void Nouveau();
-   void Dessiner();
-   void Effacer(int pos);
-   void Effacer();
-   void Tomber(float vitesse);
-   boolean Touche(int x);
+   void Effacer(char);
+   boolean Tomber(int);
    boolean IsFall();
-   int Position();
-   int PositionX();
+   boolean Touche(int);
  private:
-   int x;
-   int y;
+   
 };
 
 #endif
