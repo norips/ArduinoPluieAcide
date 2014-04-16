@@ -1,0 +1,25 @@
+from Tkinter import *
+from PIL import Image,ImageTk
+import tkFileDialog
+import Tkinter
+import Image
+
+class Application :
+    def __init__(self,master):
+        self.frame=Frame(master)
+        self.master=master
+        self.frame.pack()
+        self.canvasPrincipal=Canvas(self.frame,width=300,height=300)
+        self.canvasPrincipal.pack()
+        self.canvasPrincipal.bind("<B1-Motion>",self.mettrePoint)
+        self.canvasPrincipal.bind("<Button-1>",self.mettrePoint)
+
+    def mettrePoint(self,event):
+        self.canvasPrincipal.create_rectangle(event.x,event.y,event.x+5,event.y+5,fill="black")
+    
+
+root=Tk()
+application=Application(root)
+
+root.mainloop()
+root.destroy()
